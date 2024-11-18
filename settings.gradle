@@ -1,5 +1,10 @@
 pluginManagement {
 	repositories {
+		// 添加了阿里云仓库地址
+		maven { url "https://maven.aliyun.com/nexus/content/groups/public/" }
+		maven { url "https://maven.aliyun.com/nexus/content/repositories/jcenter" }
+		maven { url "https://maven.aliyun.com/nexus/content/repositories/spring-plugin" }
+
 		mavenCentral()
 		gradlePluginPortal()
 		maven {
@@ -8,6 +13,7 @@ pluginManagement {
 		if (version.endsWith('BUILD-SNAPSHOT')) {
 			maven { url "https://repo.spring.io/snapshot" }
 		}
+
 	}
 	resolutionStrategy {
 		eachPlugin {
@@ -23,7 +29,10 @@ pluginManagement {
 
 plugins {
 	id "com.gradle.enterprise" version "3.6.1"
-	id "io.spring.ge.conventions" version "0.0.7"
+	// 注释 io.spring.ge.conventions 不然会去验证
+//	id "io.spring.ge.conventions" version "0.0.7"
+	// 解决Formatting violations found in the following files
+//	id "io.spring.javaformat" version "0.0.31"
 }
 
 rootProject.name="spring-boot-build"

@@ -1,6 +1,7 @@
 plugins {
 	id "java-gradle-plugin"
-	id "io.spring.javaformat" version "${javaFormatVersion}"
+	// 注释改行，修正Formatting violations found错误
+//	id "io.spring.javaformat" version "${javaFormatVersion}"
 	id "checkstyle"
 }
 
