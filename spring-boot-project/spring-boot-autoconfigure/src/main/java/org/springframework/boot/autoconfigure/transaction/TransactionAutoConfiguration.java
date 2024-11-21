@@ -44,6 +44,8 @@ import org.springframework.transaction.support.TransactionTemplate;
 /**
  * {@link org.springframework.boot.autoconfigure.EnableAutoConfiguration
  * Auto-configuration} for Spring transaction.
+ * <br>
+ * 在DataSourceTransactionManagerAutoConfiguration中完成DataSourceTransactionManager配置
  *
  * @author Stephane Nicoll
  * @since 1.3.0
